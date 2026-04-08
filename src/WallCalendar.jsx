@@ -131,19 +131,26 @@ export default function WallCalendar() {
   // };
 
       const handleDay = (day) => {
-      if (!day) return;
+        if (!day) return;
 
-      const key = toKey(year, month, day);
+        const clicked = new Date(year, month, day);
 
-      const eventText = prompt("Enter event for this day:");
-
-      if (eventText) {
-        setEvents(prev => ({
-          ...prev,
-          [key]: eventText
-        }));
-      }
-    };
+        if (!rangeStart || (rangeStart && rangeEnd)) {
+          setRangeStart(clicked);
+          setRangeEnd(null);
+        } else {
+          if (clicked < rangeStart) {
+            setRangeEnd(rangeStart);
+            setRangeStart(clicked);
+          } else if (
+            clicked.getTime() === rangeStart.getTime()
+          ) {
+            setRangeStart(null);
+          } else {
+            setRangeEnd(clicked);
+          }
+        }
+      };
 
   const getDayState = (day) => {
     if (!day) return "empty";
@@ -580,6 +587,20 @@ export default function WallCalendar() {
                     className={cls}
 
                     onClick={() => handleDay(day)}
+
+                    onDoubleClick={() => {
+                      if (!day) return;
+
+                      const key = toKey(year, month, day);
+                      const eventText = prompt("Enter event for this day:");
+
+                      if (eventText) {
+                        setEvents(prev => ({
+                          ...prev,
+                          [key]: eventText
+                        }));
+                      }
+                    }}
 
                     onContextMenu={(e) => {
                       e.preventDefault();
