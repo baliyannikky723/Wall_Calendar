@@ -1,20 +1,123 @@
-<<<<<<< HEAD
-# React + Vite
+# 📅 Wall Calendar React Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, interactive wall calendar built using React and Vite. This application provides a visually appealing calendar interface with support for date range selection, notes, events, and holiday highlighting.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+### 📆 Calendar Functionality
+- Monthly calendar view
+- Navigate between months using arrow controls
+- Dynamic rendering of days and weeks
+- Highlight current day
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🎯 Date Range Selection
+- Select a start and end date
+- Visual highlighting of selected range
+- Preview selection on hover
 
-## Expanding the ESLint configuration
+### 📝 Notes System
+- Add notes for each month
+- Notes are stored and persist using local storage
+- Clean “lined paper” UI for writing
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# Wall_Calendar
->>>>>>> 5abc49318d0b9c00a4aebe179d02842c46f6ea10
+### 📌 Event Management
+- Click on a date to add an event
+- Display event inside the calendar cell
+- Right-click on a date to delete an event
+
+### 🎉 Holidays & Festivals
+- Predefined holiday system
+- Displays:
+  - Festival name
+  - Emoji/icon
+  - Colored indicator
+- Example: Diwali 🪔, Holi 🎨, Christmas 🎄
+
+### 🎨 UI & Design
+- Responsive design (mobile + desktop)
+- Modern card-style layout
+- Themed UI with accent colors
+- Hero banner with dynamic monthly images
+
+### 📱 Responsive Behavior
+- Fully responsive layout
+- Adapts to different screen sizes
+- Optimized for both desktop and mobile views
+
+---
+
+## 🛠️ Tech Stack
+
+- **React (Vite)**
+- **JavaScript (ES6+)**
+- **CSS (Custom styling)**
+- Local Storage (for notes persistence)
+
+---
+
+
+---
+
+## ▶️ How to Run Locally
+
+Follow these steps to run the project on your system:
+
+### 1. Clone the repository
+
+### 2. Navigate to project folder
+
+### 3. Install dependencies
+
+### 4. Start development server
+
+### 5. Open in browser
+
+
+---
+
+## 🌐 Live Demo
+
+👉 https://wall-calendar-rho-rouge.vercel.app/
+
+---
+
+## 🎥 Video Demonstration
+
+👉 https://www.loom.com/share/a1b7a214cce248589e10b66fdc1cd697
+
+The video demonstrates:
+- Calendar navigation
+- Date range selection
+- Notes functionality
+- Event creation & deletion
+- Responsive behavior (mobile + desktop)
+
+---
+
+## 💡 Key Design Decisions
+
+- Used **React state** for managing events, notes, and UI interactions
+- Implemented **local storage** for persistence without backend
+- Designed a **modular and scalable structure** for easy feature extension
+- Focused on **clean UI/UX with modern styling**
+
+---
+
+## 🚀 Future Improvements
+
+- Multiple events per day
+- Edit events functionality
+- Backend integration (Spring Boot)
+- User authentication system
+- API-based holiday data
+
+---
+
+## 👨‍💻 Author
+
+**Nikky Baliyan**
+
+---
+
